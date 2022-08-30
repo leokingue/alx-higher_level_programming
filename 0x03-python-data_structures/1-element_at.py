@@ -3,7 +3,7 @@ def element_at(my_list, idx):
     """
     my_list: a list
     @idx: index of element
-    Return: an element of list
+    Return: element of list
     """
     if (idx < 0) or (idx > len(my_list) - 1):
         return None
