@@ -89,3 +89,17 @@ class Rectangle(Base):
                                                                  self.__width,
                                                                  self.__height)
 
+    def update(self, *args):
+        """update the attributes"""
+        if len(args):
+            for i, a in enumerate(args):
+                if i == 0:
+                    self.__id = a
+                elif i == 1:
+                    self.__width = a
+                elif i == 2:
+                    self.__height = a
+                elif i == 3:
+                    self.__x = a
+                elif i == 4:
+                    self.__y = a
