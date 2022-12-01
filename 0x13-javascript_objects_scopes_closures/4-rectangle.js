@@ -1,4 +1,5 @@
 #!/usr/bin/node
+// Implementation of Rectangle Class
 
 class Rectangle {
   constructor (w, h) {
@@ -9,14 +10,26 @@ class Rectangle {
   }
 
   print () {
-    let prints = '';
-    for (let cont1 = 0; cont1 < this.height; cont1++) {
-      for (let cont = 0; cont < this.width; cont++) {
-        prints = prints + 'X';
+    let i, j, string;
+    for (i = 0; i < this.height; i++) {
+      string = '';
+      for (j = 0; j < this.width; j++) {
+        string += 'X';
       }
-      console.log(prints);
-      prints = '';
+      console.log(string);
     }
+  }
+
+  rotate () {
+    const temp;
+    temp = this.height;
+    this.height = this.width;
+    this.width = temp;
+  }
+
+  double () {
+    this.height *= 2;
+    this.width *= 2;
   }
 }
 module.exports = Rectangle;
