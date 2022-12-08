@@ -17,6 +17,7 @@ if __name__ == "__main__":
             " '{:s}' ORDER BY id ASC".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if row[1] == argv[4]:
+            print(row)
     cur.close()
     db.close()
