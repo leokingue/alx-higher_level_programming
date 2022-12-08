@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+'''./1-filter_states.py root root hbtn_0e_0_usa'''
 import MySQLdb
 from sys import argv
 
